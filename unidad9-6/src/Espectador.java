@@ -10,4 +10,17 @@ public class Espectador {
 		this.dinero = dinero;
 		
 	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public double getDinero() {
+		return dinero;
+	}
+	
 }
