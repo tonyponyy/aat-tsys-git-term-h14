@@ -2,6 +2,7 @@
 public class main_app {
 	public static void main(String[] args) {
 		System.out.println("ejercicio 6");
+
 		
 		Pelicula pelicula1 = new Pelicula("Harry Potter: el prisonero de Azkaban", 137, 12, "Alfonso Cuarón");
 		Pelicula pelicula2 = new Pelicula("Doce hombres sin piedad", 95, 16, "Sidney Lumet");
@@ -17,6 +18,13 @@ public class main_app {
 		Espectador espectador7 = new Espectador("Luis", 33, 5);
 		Espectador espectador8 = new Espectador("Isabel", 9, 9);
 		
+		Pelicula[] peliculas = {pelicula1,pelicula2,pelicula3};
+		Pelicula pelicula_random = peliculas[(int) (Math.random()*peliculas.length)];
+		Espectador[] espectadores = {espectador1,espectador2,espectador3,espectador4,espectador5,espectador6,espectador7,espectador8};
+		Cine yelmo = new Cine(pelicula_random,9,8,18);
 		
+		
+		
+	
 	}
 }
