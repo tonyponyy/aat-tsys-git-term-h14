@@ -1,3 +1,4 @@
+import java.util.Iterator;
 
 public class Cine {
 	
@@ -12,6 +13,7 @@ public class Cine {
 		this.precio = precio;
 		this.filas = filas;
 		this.columnas = columnas;
+        this.asientos = new Asiento[filas][columnas]; 
 		rellenar(filas, columnas);
 	}
 
@@ -49,6 +51,17 @@ public class Cine {
 				asientos[o][i] = new Asiento((char)(65+i),(8-o),false);
 			}
 		}
+	}
+	
+	public boolean hayAsientos() {
+	    for (int o = 0; o < asientos.length; o++) {
+	        for (int i = 0; i < asientos[o].length; i++) {
+	            if (asientos[o][i].isOcupado()) {
+	                return true; 
+	            }
+	        }
+	    }
+	    return false; 
 	}
 
 	
