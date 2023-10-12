@@ -1,4 +1,3 @@
-import java.util.Iterator;
 
 public class Cine {
 	
@@ -56,7 +55,7 @@ public class Cine {
 	public boolean hayAsientos() {
 	    for (int o = 0; o < asientos.length; o++) {
 	        for (int i = 0; i < asientos[o].length; i++) {
-	            if (asientos[o][i].isOcupado()) {
+	            if (!asientos[o][i].isOcupado()) {
 	                return true; 
 	            }
 	        }
